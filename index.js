@@ -53,9 +53,9 @@ class House {
         return this.residents;
     };
 
-    addResident = () => {
-        return this.
-    }
+    addResident = (resident) => {
+        this.residents.push(resident);
+    };
 
 
 }
@@ -64,5 +64,8 @@ let Pedro = new Person("Pedro", 19)
 let David = new Person("David", 21)
 
 let house = new House("randomaddress", 280000, [Pedro, David])
+console.log(house.getResidents());
 
+let Paulo = new Person("Paulo",19)
+house.addResident(Paulo);
 console.log(house.getResidents());
