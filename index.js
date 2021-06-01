@@ -1,3 +1,16 @@
+// Timestamps 
+// 00:00 | Introduction 
+// 04:09 | Beginners
+// 22:24 | Abstraction
+// 27:50 | Encapsulation
+// 31:45 | Inheritance
+// 39:00 | Polymorphism
+// 44:00 | Outro
+
+// _ means don't touch my code alone;
+// setName or getName = good nomenclature;
+
+
 console.log(typeof []); //object
 console.log(typeof ""); //string
 
@@ -65,6 +78,7 @@ class House {
 }
 
 let Pedro = new Person("Pedro", 19)
+console.log(Pedro.age);
 let David = new Person("David", 21)
 
 let house = new House("randomaddress", 280000, [David])
