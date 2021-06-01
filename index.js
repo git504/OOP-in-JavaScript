@@ -9,6 +9,7 @@
 
 // _ means don't touch my code alone;
 // setName or getName = good nomenclature;
+//extend ---> super
 
 
 console.log(typeof []); //object
@@ -40,6 +41,26 @@ class Person {
 
 
 }
+///////////////////////////////////////////////
+class Programmer extends Person {
+
+    constructor(name, age, company, salary, language) {
+        super(name, age);
+        this.salary = salary;
+        this.company = company;
+        this.language = language;
+    }
+
+    sayHi = () => {
+        console.log(`Hello, I'm a programmer! my name is ${this.getName} I work for ${this.company}`);
+    }
+
+}
+
+let programmer = new Programmer("Twitch", 10000000, "JavaScript")
+programmer.sayHi();
+
+//////////////////////////////////////////////////////
 
 let Person1 = new Person("Pedro", 19)
 let Person2 = new Person ("Moise Kean", 23)
