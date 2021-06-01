@@ -5,8 +5,9 @@ console.log(typeof ""); //string
 class Person {
 
     constructor(name, age) {
-        this.age = age
-        this.name = name
+        this.age = age;
+        this.name = name;
+        this.job = "";
     }
 
     getName = () => {
@@ -18,6 +19,11 @@ class Person {
         return this.age 
         //getAge is a methode = function
         };
+
+    setJob = (job) => {
+        this.job = job;
+
+    }
 
 
 }
@@ -56,16 +62,18 @@ class House {
     addResident = (resident) => {
         this.residents.push(resident);
     };
-
-
 }
 
 let Pedro = new Person("Pedro", 19)
 let David = new Person("David", 21)
 
-let house = new House("randomaddress", 280000, [Pedro, David])
+let house = new House("randomaddress", 280000, [David])
 console.log(house.getResidents());
 
-let Paulo = new Person("Paulo",19)
+let Paulo = new Person("Paulo",19);
+Pedro.setJob("Developper");
+house.addResident(Pedro);
 house.addResident(Paulo);
 console.log(house.getResidents());
+
+/////////////////////////////////////////////////////
