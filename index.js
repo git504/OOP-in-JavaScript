@@ -1,5 +1,5 @@
-// Timestamps 
-// 00:00 | Introduction 
+// Timestamps
+// 00:00 | Introduction
 // 04:09 | Beginners
 // 22:24 | Abstraction
 // 27:50 | Encapsulation
@@ -11,59 +11,59 @@
 // setName or getName = good nomenclature;
 //extend ---> super
 
-
 console.log(typeof []); //object
 console.log(typeof ""); //string
 
 /////////////////////////////////////////
 class Person {
+  constructor(name, age) {
+    this.age = age;
+    this.name = name;
+    this.job = "";
+  }
 
-    constructor(name, age) {
-        this.age = age;
-        this.name = name;
-        this.job = "";
-    }
+  getName = () => {
+    return this.name;
+    //getName is a methode = function
+  };
 
-    getName = () => {
-        return this.name 
-        //getName is a methode = function
-    };
-    
-    getAge = () => {
-        return this.age 
-        //getAge is a methode = function
-        };
+  getAge = () => {
+    return this.age;
+    //getAge is a methode = function
+  };
 
-    setJob = (job) => {
-        this.job = job;
-
-    }
-
-
+  setJob = (job) => {
+    this.job = job;
+  };
 }
 ///////////////////////////////////////////////
 class Programmer extends Person {
+  constructor(name, age, company, salary, language) {
+    super(name, age);
+    this.company = company;
+    this.salary = salary;
+    this.language = language;
+  }
 
-    constructor(name, age, company, salary, language) {
-        super(name, age);
-        this.salary = salary;
-        this.company = company;
-        this.language = language;
-    }
-
-    sayHi = () => {
-        console.log(`Hello, I'm a programmer! my name is ${this.getName} I work for ${this.company}`);
-    }
-
+  sayHi = () => {
+    console.log(
+      `Hello, I'm a programmer! My name is ${this.getName()}, I work for ${
+        this.company
+      }`
+    );
+  };
 }
 
-let programmer = new Programmer("Twitch", 10000000, "JavaScript")
+let programmer = new Programmer("Pedro", 19, "Twitch", 10000000, "JavaScript");
 programmer.sayHi();
 
+const name = "Pedro"; //string
+console.log(1 == "1");
+console.log(340 + "432"); //number + string
 //////////////////////////////////////////////////////
 
-let Person1 = new Person("Pedro", 19)
-let Person2 = new Person ("Moise Kean", 23)
+let Person1 = new Person("Pedro", 19);
+let Person2 = new Person("Moise Kean", 23);
 
 console.log(Person1.name);
 console.log(Person2.name);
@@ -76,36 +76,36 @@ console.log(Person2.getAge());
 
 ////////////////////////////////////////////////////
 class House {
-    constructor(address, price, residents) {
-        this.address = address;
-        this.price = price;
-        this.residents = residents;
-    };
-    getAdress = () => {
-        return this.address;
-    };
+  constructor(address, price, residents) {
+    this.address = address;
+    this.price = price;
+    this.residents = residents;
+  }
+  getAdress = () => {
+    return this.address;
+  };
 
-    getPrice = () => {
-        return this.price;
-    };
+  getPrice = () => {
+    return this.price;
+  };
 
-    getResidents = () => {
-        return this.residents;
-    };
+  getResidents = () => {
+    return this.residents;
+  };
 
-    addResident = (resident) => {
-        this.residents.push(resident);
-    };
+  addResident = (resident) => {
+    this.residents.push(resident);
+  };
 }
 
-let Pedro = new Person("Pedro", 19)
+let Pedro = new Person("Pedro", 19);
 console.log(Pedro.age);
-let David = new Person("David", 21)
+let David = new Person("David", 21);
 
-let house = new House("randomaddress", 280000, [David])
+let house = new House("randomaddress", 280000, [David]);
 console.log(house.getResidents());
 
-let Paulo = new Person("Paulo",19);
+let Paulo = new Person("Paulo", 19);
 Pedro.setJob("Developper");
 house.addResident(Pedro);
 house.addResident(Paulo);
